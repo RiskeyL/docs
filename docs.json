@@ -9,60 +9,107 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
+        "language": "en",
         "groups": [
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "en/index",
+              "en/quickstart",
+              "en/development"
             ]
           },
           {
             "group": "Customization",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "en/essentials/settings",
+              "en/essentials/navigation"
             ]
           },
           {
             "group": "Writing content",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "en/essentials/markdown",
+              "en/essentials/code",
+              "en/essentials/images",
+              "en/essentials/reusable-snippets"
             ]
           },
           {
             "group": "AI tools",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "en/ai-tools/cursor",
+              "en/ai-tools/claude-code",
+              "en/ai-tools/windsurf"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
+          },
           {
             "group": "API documentation",
             "pages": [
-              "api-reference/introduction"
+              "en/api-reference/introduction"
             ]
           },
           {
             "group": "Endpoint examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "en/api-reference/endpoint/get",
+              "en/api-reference/endpoint/create",
+              "en/api-reference/endpoint/delete",
+              "en/api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "cn",
+        "groups": [
+          {
+            "group": "快速开始",
+            "pages": [
+              "cn/index",
+              "cn/quickstart",
+              "cn/development"
+            ]
+          },
+          {
+            "group": "个性化设置",
+            "pages": [
+              "cn/essentials/settings",
+              "cn/essentials/navigation"
+            ]
+          },
+          {
+            "group": "编写内容",
+            "pages": [
+              "cn/essentials/markdown",
+              "cn/essentials/code",
+              "cn/essentials/images",
+              "cn/essentials/reusable-snippets"
+            ]
+          },
+          {
+            "group": "AI 工具",
+            "pages": [
+              "cn/ai-tools/cursor",
+              "cn/ai-tools/claude-code",
+              "cn/ai-tools/windsurf"
+            ]
+          },
+          {
+            "group": "API 文档",
+            "pages": [
+              "cn/api-reference/introduction"
+            ]
+          },
+          {
+            "group": "端点示例",
+            "pages": [
+              "cn/api-reference/endpoint/get",
+              "cn/api-reference/endpoint/create",
+              "cn/api-reference/endpoint/delete",
+              "cn/api-reference/endpoint/webhook"
             ]
           }
         ]
@@ -102,15 +149,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
