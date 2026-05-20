@@ -1,43 +1,45 @@
-# Mintlify Starter Kit
+# Repro: product context resets on shared pages
 
-Use the starter kit to get your docs deployed and ready to customize.
+Minimal Mintlify docs that reproduce the product switcher resetting when a shared page is opened. Filed alongside a support thread about structuring docs where some sections are product-specific and some are shared across products.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Navigation structure
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+The `docs.json` nests navigation as `languages` (en, zh) > `products` (Product A, Product B) > `tabs` (Doc 1, Doc 2) > `pages`.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- **Doc 1** holds three pages that are unique to each product, under `{language}/product_a/` and `{language}/product_b/`.
+- **Doc 2** is shared. Both products list the exact same page paths (`{language}/shared/billing`, `/security`, `/support`). There is a single physical copy of each shared file, referenced from both products' navigation blocks.
 
-## Development
+Product A is listed before Product B in `docs.json`.
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+```
+en/
+  product_a/  a-overview, a-install, a-usage   (Doc 1, unique to A)
+  product_b/  b-overview, b-install, b-usage   (Doc 1, unique to B)
+  shared/     billing, security, support       (Doc 2, referenced by A and B)
+zh/
+  ... mirrored
+```
+
+## Steps to reproduce
+
+1. Open the site and select **Product B** in the product switcher.
+2. While in Product B, click the **Doc 2** tab.
+
+The redirect happens as soon as the Doc 2 tab is opened. You do not need to click an individual shared page first.
+
+## Expected
+
+Opening Doc 2 under Product B keeps you in Product B.
+
+## Observed
+
+The product switcher jumps to **Product A** the moment the Doc 2 tab is opened. Doc 2's pages resolve to the first product in `docs.json` that lists them, which is Product A, so the selected Product B context is lost.
+
+This makes shared sections feel like they belong to whichever product appears first, and the user's product selection is not preserved when navigating to shared documentation.
+
+## Local preview
 
 ```
 npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
 mint dev
 ```
-
-View your local preview at `http://localhost:3000`.
-
-## Publishing changes
-
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
-
-## Need help?
-
-### Troubleshooting
-
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
-
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)

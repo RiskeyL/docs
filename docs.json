@@ -1,169 +1,125 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Product switcher repro",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "languages": [
       {
         "language": "en",
-        "groups": [
+        "products": [
           {
-            "group": "Getting started",
-            "pages": [
-              "en/index",
-              "en/quickstart",
-              "en/development"
+            "product": "A",
+            "icon": "rocket",
+            "tabs": [
+              {
+                "tab": "Doc 1",
+                "icon": "book-open",
+                "pages": [
+                  "en/product_a/a-overview",
+                  "en/product_a/a-install",
+                  "en/product_a/a-usage"
+                ]
+              },
+              {
+                "tab": "Doc 2",
+                "icon": "share-nodes",
+                "pages": [
+                  "en/shared/billing",
+                  "en/shared/security",
+                  "en/shared/support"
+                ]
+              }
             ]
           },
           {
-            "group": "Customization",
-            "pages": [
-              "en/essentials/settings",
-              "en/essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "en/essentials/markdown",
-              "en/essentials/code",
-              "en/essentials/images",
-              "en/essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "en/ai-tools/cursor",
-              "en/ai-tools/claude-code",
-              "en/ai-tools/windsurf"
-            ]
-          },
-          {
-            "group": "API documentation",
-            "pages": [
-              "en/api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "en/api-reference/endpoint/get",
-              "en/api-reference/endpoint/create",
-              "en/api-reference/endpoint/delete",
-              "en/api-reference/endpoint/webhook"
+            "product": "B",
+            "icon": "cube",
+            "tabs": [
+              {
+                "tab": "Doc 1",
+                "icon": "book-open",
+                "pages": [
+                  "en/product_b/b-overview",
+                  "en/product_b/b-install",
+                  "en/product_b/b-usage"
+                ]
+              },
+              {
+                "tab": "Doc 2",
+                "icon": "share-nodes",
+                "pages": [
+                  "en/shared/billing",
+                  "en/shared/security",
+                  "en/shared/support"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "language": "cn",
-        "groups": [
+        "language": "zh",
+        "products": [
           {
-            "group": "快速开始",
-            "pages": [
-              "cn/index",
-              "cn/quickstart",
-              "cn/development"
+            "product": "A",
+            "icon": "rocket",
+            "tabs": [
+              {
+                "tab": "Doc 1",
+                "icon": "book-open",
+                "pages": [
+                  "zh/product_a/a-overview",
+                  "zh/product_a/a-install",
+                  "zh/product_a/a-usage"
+                ]
+              },
+              {
+                "tab": "Doc 2",
+                "icon": "share-nodes",
+                "pages": [
+                  "zh/shared/billing",
+                  "zh/shared/security",
+                  "zh/shared/support"
+                ]
+              }
             ]
           },
           {
-            "group": "个性化设置",
-            "pages": [
-              "cn/essentials/settings",
-              "cn/essentials/navigation"
-            ]
-          },
-          {
-            "group": "编写内容",
-            "pages": [
-              "cn/essentials/markdown",
-              "cn/essentials/code",
-              "cn/essentials/images",
-              "cn/essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI 工具",
-            "pages": [
-              "cn/ai-tools/cursor",
-              "cn/ai-tools/claude-code",
-              "cn/ai-tools/windsurf"
-            ]
-          },
-          {
-            "group": "API 文档",
-            "pages": [
-              "cn/api-reference/introduction"
-            ]
-          },
-          {
-            "group": "端点示例",
-            "pages": [
-              "cn/api-reference/endpoint/get",
-              "cn/api-reference/endpoint/create",
-              "cn/api-reference/endpoint/delete",
-              "cn/api-reference/endpoint/webhook"
+            "product": "B",
+            "icon": "cube",
+            "tabs": [
+              {
+                "tab": "Doc 1",
+                "icon": "book-open",
+                "pages": [
+                  "zh/product_b/b-overview",
+                  "zh/product_b/b-install",
+                  "zh/product_b/b-usage"
+                ]
+              },
+              {
+                "tab": "Doc 2",
+                "icon": "share-nodes",
+                "pages": [
+                  "zh/shared/billing",
+                  "zh/shared/security",
+                  "zh/shared/support"
+                ]
+              }
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }
